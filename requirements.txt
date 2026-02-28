@@ -1,0 +1,34 @@
+# NOTE: Run `python -m pip install --upgrade pip` before installing.
+# All packages below resolve to pre-built wheels on Python 3.10-3.12 / Windows x64.
+# No internet connection is required AFTER running setup_local.py.
+
+# ── Core ───────────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Data & Finance ─────────────────────────────────────────────────────────────
+# pandas 2.2.x ships wheels for cp310-cp312 on win_amd64 via PyPI.
+pandas>=2.1.0,<2.3.0
+numpy>=1.26.0,<2.0.0
+yfinance>=0.2.38,<0.3.0
+
+# ── NLP / Sentiment (fully local — no OpenAI / cloud dependency) ───────────────
+nltk==3.8.1
+# transformers + torch: CPU-only wheel keeps download size manageable.
+# For GPU support replace torch with: torch>=2.2.0 (no +cpu suffix).
+torch>=2.2.0,<2.5.0          --index-url https://download.pytorch.org/whl/cpu
+transformers>=4.39.0,<5.0.0
+
+# ── Agentic Orchestration ──────────────────────────────────────────────────────
+langgraph>=0.1.5,<0.2.0
+
+# ── Dashboard ──────────────────────────────────────────────────────────────────
+streamlit>=1.33.0,<2.0.0
+plotly>=5.20.0,<6.0.0
+
+# ── Database ───────────────────────────────────────────────────────────────────
+# sqlite3 ships with the Python standard library — no install needed.
+
+# ── Utilities (yfinance transitive dep) ────────────────────────────────────────
+requests>=2.31.0,<3.0.0
+feedparser>=6.0.0
+

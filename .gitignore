@@ -1,0 +1,54 @@
+# ── Byte-compiled / optimized / DLL files ──────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ── Virtual Environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Distribution / Packaging ───────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── Secrets ────────────────────────────────────────────────────────────────────
+.env
+*.env.*
+!.env.example
+
+# ── Database ───────────────────────────────────────────────────────────────────
+data/*.db
+data/*.sqlite
+
+# ── Jupyter ────────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Testing ────────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── IDE / Editor ───────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── OS Artifacts ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Model Cache (multi-GB — never commit) ─────────────────────────────────────
+models/
+*.pt
+*.bin
+*.safetensors
+logs/
+test_output.txt
+.pyre_configuration
+pyrightconfig.json
