@@ -57,7 +57,7 @@ sentiment_trader/
 ### 1. Clone & enter the project
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/nagasheshadri01/TradeFlow.git>
 cd sentiment_trader
 ```
 
